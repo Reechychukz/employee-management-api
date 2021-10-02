@@ -1,3 +1,6 @@
+using Contracts;
+using LoggerService;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace employee_management_api.Extensions
@@ -13,5 +16,14 @@ namespace employee_management_api.Extensions
              .AllowAnyMethod()
              .AllowAnyHeader());
       });
- }
+
+  public static void ConfigureIISIntegration(this IServiceCollection services) =>
+  services.Configure<IISOptions>(options =>
+  {
+
+  });
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddScoped<ILoggerManager, LoggerManager>();
+    }
 }
