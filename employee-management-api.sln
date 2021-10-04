@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "employee-management-api", "employee-management-api\employee-management-api.csproj", "{FF8B3F9C-8CCF-475B-98AA-9E4EA5B65484}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{F973D2BD-9F6B-44F3-94B7-7783E95FBBEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Contracts\Infrastructure.csproj", "{F973D2BD-9F6B-44F3-94B7-7783E95FBBEE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{A1B76939-6825-418D-BFD2-8DD351BE6932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3D72C7A9-B12D-47F8-AAC2-D8FFCEBF2AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3D72C7A9-B12D-47F8-AAC2-D8FFCEBF2AAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{AEB0FAE9-2F39-41B7-ACEC-58123C275F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{AEB0FAE9-2F39-41B7-ACEC-58123C275F28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

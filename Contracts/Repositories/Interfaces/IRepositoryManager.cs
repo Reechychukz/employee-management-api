@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories.Interfaces
 {
-    public interface ICompanyRepository
+    public interface IRepositoryManager
     {
-        IEnumerable<Company> GetAllCompanies(bool trackChanges);
+        ICompanyRepository Company { get; }
+        IEmployeeRepository Employee { get; }
+        void Save();
     }
 }

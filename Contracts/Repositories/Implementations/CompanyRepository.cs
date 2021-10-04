@@ -15,5 +15,10 @@ namespace Infrastructure.Repositories.Implementations
             : base(appDbContext)
         {
         }
+
+        public IEnumerable<Company> GetAllCompanies(bool trackChanges) =>
+            FindAll(trackChanges)
+            .OrderBy(c => c.Name)
+            .ToList();
     }
 }

@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data.DbContexts;
+using Infrastructure.Repositories.Interfaces;
+using Infrastructure.Repositories.Implementations;
 
 namespace employee_management_api.Extensions
 {
@@ -32,6 +34,9 @@ namespace employee_management_api.Extensions
         services.AddDbContext<AppDbContext>(opts =>
           opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
           b.MigrationsAssembly("Infrastructure.Data")));
+
+        public static void ConfigureRepositoryManager(this IServiceCollection services) =>
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
 
     }
 
