@@ -1,7 +1,9 @@
-﻿using Contracts;
+﻿using Application.DTOs;
+using Contracts;
 using Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace employee_management_api.Controllers
 {
@@ -24,7 +26,13 @@ namespace employee_management_api.Controllers
             try
             {
                 var companies = _repository.Company.GetAllCompanies(trackChanges: false);
-                return Ok(companies);
+                var companiesDto = companies.Select(c => new CompanyDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    FullAddress = string.Join(' ', c.Address, c.Country)
+                }).ToList();
+                return Ok(companiesDto);
             }
             catch(Exception ex)
             {
