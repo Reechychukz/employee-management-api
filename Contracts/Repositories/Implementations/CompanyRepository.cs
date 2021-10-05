@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories.Implementations
 {
-    class CompanyRepository : RepositoryBase<Company>, ICompanyRepository
+    public class CompanyRepository : RepositoryBase<Company>, ICompanyRepository
     {
         public CompanyRepository(AppDbContext appDbContext)
             : base(appDbContext)
