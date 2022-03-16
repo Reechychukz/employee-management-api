@@ -28,7 +28,6 @@ namespace employee_management_api.Controllers
             var companies = _repository.Company.GetAllCompanies(trackChanges: false);
             var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
             return Ok(companiesDto);
-            throw new Exception("Exception");
         }
 
         [HttpGet("{id}")]
@@ -42,6 +41,7 @@ namespace employee_management_api.Controllers
             }
             else
             {
+                
                 var companyDto = _mapper.Map<CompanyDto>(company);
                 return Ok(companyDto);
             }

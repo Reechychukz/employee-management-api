@@ -35,7 +35,7 @@ namespace employee_management_api.Extensions
               opts.UseSqlServer(configuration.GetConnectionString("sqlConnection")));
 
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
-                services.AddScoped<IRepositoryManager, RepositoryManager>();
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
 
     }
 }
