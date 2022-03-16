@@ -22,19 +22,19 @@ namespace employee_management_api.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult GetCompanyEmployees(Guid companyId)
-        {
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
-            if(company == null)
-            {
-                _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
-                return NotFound();
-            }
+        //[HttpGet()]
+        //public IActionResult GetCompanyEmployees(Guid companyId)
+        //{
+        //    var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+        //    if(company == null)
+        //    {
+        //        _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
+        //        return NotFound();
+        //    }
 
-            var employeesFromDb = _repository.Employee.GetEmployees(companyId, trackChanger: false);
-            var employesDto = _mapper.Map<IEnumerable<EmployeeDTO>>(employeesFromDb);
-            return Ok(employeesFromDb);
-        }
+        //    var employeesFromDb = _repository.Employee.GetEmployees(companyId, trackChanger: false);
+        //    var employesDto = _mapper.Map<IEnumerable<EmployeeDTO>>(employeesFromDb);
+        //    return Ok(employeesFromDb);
+        //}
     }
 }
