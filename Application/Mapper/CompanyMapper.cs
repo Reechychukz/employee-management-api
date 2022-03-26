@@ -17,6 +17,7 @@ namespace Application.Mapper
             CreateMap<Employee, EmployeeDTO>();
 
             CreateMap<CompanyForCreationDto, Company>();
+            CreateMap<EmployeeForCreationDto, Employee>();
         }
     }
 }
